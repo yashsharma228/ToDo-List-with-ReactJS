@@ -1,0 +1,54 @@
+.tag {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 5px 12px;
+    margin-right: 8px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .tag:hover {
+    opacity: 0.8;
+  }
+  
+  .tag[style*="background-color"] {
+    color: white;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 900px) {
+    .app_main {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .task_column {
+      width: 90%;
+    }
+  
+    .app_header form {
+      width: 80%;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .app_header form {
+      width: 100%;
+      padding: 15px;
+    }
+  
+    .task_form_bottom_line {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .task_status {
+      width: 100%;
+    }
+  
+    .task_submit {
+      width: 100%;
+    }
+  }

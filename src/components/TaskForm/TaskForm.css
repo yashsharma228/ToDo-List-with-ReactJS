@@ -1,0 +1,130 @@
+/* Main container styles */
+.app_header {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background: #f8f9fa; /* Light background for contrast */
+    border-bottom: 2px solid #ddd;
+    width: 100%;
+}
+
+/* Form container */
+.app_header form {
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Slightly deeper shadow */
+    transition: all 0.3s ease-in-out;
+}
+
+.app_header form:hover {
+    transform: scale(1.02);  /* Subtle zoom effect on hover */
+}
+
+/* Task Input */
+.task_input {
+    font-size: 18px;
+    padding: 12px;
+    width: 100%;
+    border: 2px solid #dfe3e6;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+/* Focus effect for better user experience */
+.task_input:focus {
+    border-color: #6457f9;
+    box-shadow: 0px 0px 5px rgba(100, 87, 249, 0.5);
+}
+
+/* Placeholder style */
+.task_input::placeholder {
+    color: #888;
+    font-style: italic;
+}
+
+/* Layout for dropdown and button */
+.task_form_bottom_line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;  /* Wrap items for smaller screens */
+}
+
+/* Dropdown styles */
+.task_status {
+    font-size: 16px;
+    padding: 8px;
+    border: 2px solid #999;
+    border-radius: 8px;
+    width: 140px;
+    height: 42px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect for dropdown */
+.task_status:hover {
+    border-color: #6457f9;
+}
+
+/* Button styles */
+.task_submit {
+    font-size: 16px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #6457f9, #4a3ec0);
+    color: white;
+    border-radius: 8px;
+    height: 42px;
+    padding: 8px 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-left: 15px;
+}
+
+/* Button hover effect */
+.task_submit:hover {
+    background: linear-gradient(135deg, #4a3ec0, #3129a6);
+    transform: scale(1.05);
+}
+
+/* 🔹 Responsive Design (For Small Screens) */
+@media (max-width: 600px) {
+    .app_header form {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    .task_form_bottom_line {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .task_status,
+    .task_submit {
+        width: 100%;
+        text-align: center;
+        margin: 5px 0;
+    }
+}
+
+/* 🔹 Fix for Safari and Edge */
+input,
+select,
+button {
+    -webkit-appearance: none;  /* Removes default iOS styling */
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Ensuring consistency across all browsers */
+* {
+    box-sizing: border-box;
+}
